@@ -1,0 +1,9 @@
+# Cartelle di compilazione
+[Bb]in/
+[Oo]bj/
+
+# File di configurazione dell'editor / Visual Studio / VS Code
+.vs/
+*.user
+*.suo
+.vscode/
