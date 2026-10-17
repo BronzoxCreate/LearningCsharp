@@ -1,0 +1,75 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PasswordGeneratorUI.MainWindow"
+        Title="Kryptos"
+        Width="460" Height="560"
+        MinWidth="420" MinHeight="520"
+        WindowStartupLocation="CenterScreen">
+
+        <Window.Styles>
+  <Style Selector="Button.rosso">
+    <Setter Property="Background" Value="#E5484D" />
+    <Setter Property="Foreground" Value="White" />
+  </Style>
+  <Style Selector="Button.verde">
+    <Setter Property="Background" Value="#46A758" />
+    <Setter Property="Foreground" Value="White" />
+  </Style>
+  <Style Selector="Button.giallo">
+    <Setter Property="Background" Value="#F5C518" />
+    <Setter Property="Foreground" Value="Black" />
+  </Style>
+</Window.Styles>
+
+  <StackPanel Margin="28" Spacing="18">
+
+    <StackPanel Spacing="2">
+      <TextBlock Text="Kryptos - Generator" FontSize="24" FontWeight="SemiBold" />
+      <TextBlock Text="Generate passwords securely, all locallly with Kryptos" Opacity="0.6" />
+    </StackPanel>
+
+    <StackPanel Spacing="6">
+      <Grid ColumnDefinitions="*,Auto">
+        <TextBlock Text="Length" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="1"
+                   Text="{Binding Value, ElementName=LengthSlider, StringFormat={}{0:0}}"
+                   FontWeight="SemiBold" />
+      </Grid>
+      <Slider x:Name="LengthSlider"
+              Minimum="8" Maximum="32" Value="16"
+              TickFrequency="1" IsSnapToTickEnabled="True" />
+    </StackPanel>
+
+    <StackPanel Spacing="4">
+      <CheckBox x:Name="NumbersCheck" Content="Include Numbers (0-9)" IsChecked="True" />
+      <CheckBox x:Name="SpecialsCheck" Content="Include Special Characters ( ! # - _ ( ) . )" IsChecked="True" />
+    </StackPanel>
+
+    <Button x:Name="GenerateButton"
+            Content="Generate Password"
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Center"
+            Padding="0,10"
+            Click="OnGenerate" />
+
+    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+      <TextBox x:Name="OutputBox"
+               IsReadOnly="True"
+               Watermark="The password will appear here"
+               FontSize="16"
+               FontFamily="Cascadia Mono, Consolas, DejaVu Sans Mono, Liberation Mono, monospace" />
+      <Button Grid.Column="1"
+              x:Name="CopyButton"
+              Content="Copy"
+              IsEnabled="False"
+              Click="OnCopy" />
+    </Grid>
+
+  
+
+
+
+
+
+  </StackPanel>
+</Window> 
