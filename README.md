@@ -1,10 +1,16 @@
 # LearningCsharp
-This is a repository containing all of my learning and training (and projects) in C#
+This is a small project where im trying to learn c# 
 
-// the c# program is : Program.cs
-// First commit : 16/10/2026 
+// Password Generator version 0.1.2 (latest) before 0.1.1 (alpha) - expect bugs 
 
-// Password Generator version 0.1.1 (latest) before 0.1.0
+// + Added UI with Avalonia
 
-// the password generator is : PasswordGenerator.cs
+// - Removed the passwordgenerator.cs runned in the terminal
+
+
+// - = removed  
+// + = added 
+// * = fixed
+
+
 
