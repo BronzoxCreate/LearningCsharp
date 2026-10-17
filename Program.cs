@@ -1,4 +1,6 @@
 ﻿// 0. Avvio 
+#if false
+
 using System;
 using System.Collections.Generic;
 
@@ -61,3 +63,5 @@ for (int i = numeri.Count - 1; i >= 1; i--)  // i >= 1 dice al indice "i" di con
 {
     Console.WriteLine("Posizione: " + numeri[i]);
 }
+
+#endif
